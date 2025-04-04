@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Wash Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: url('img(5).jpg') no-repeat center center/cover;           
+            color: #fff;
+        }
+        .navbar {
+            background-color:rgba(30, 58, 138, 0.9); /* Deep Blue with transparency */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 600px;
+            width:1000px;
+            height: 800px;
+            margin: 50px auto;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent white */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px); /* Glassmorphism effect */
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.5);
+            transition: 0.3s;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #28a745; /* Green */
+            color: white;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(30, 58, 138, 0.9);
+            color: white;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            .navbar {
+                font-size: 20px;
+            }
+            button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        Bike Wash Booking
+    </nav>
+
+    <div class="container">
+        <form action="find_shop.php" method="POST">
+            <h2>Your Information</h2>
+            <label>NAME :</label>
+            <input type="text" name="username" placeholder="Full Name" required>  
+            <br>
+            <label>PHONE NUMBER :</label>
+            <input type="tel" name="phone" placeholder="Phone Number" required> 
+            <br>
+            <label>EMAIL :</label>
+            <input type="text" name="email" placeholder="Email" required> 
+            <br>
+            <label>ADDRESS :</label>
+            <input type="text" name="address" placeholder="Enter Address (e.g., MG Road, Bengaluru)" required>
+            <br>
+            <h2>Bike Details</h2>
+            <label>BIKE_MODEL :</label>
+            <input type="text" name="bike_model" placeholder="Bike Name/Model" required>
+            <br>
+            <label>BIKE_NUMBER :</label>
+            <input type="text" name="bike_number" placeholder="Bike Number" required>
+            <br>
+            <label>BIKE_COLOUR :</label>
+            <input type="text" name="bike_color" placeholder="Bike Color" required>
+        
+            <button type="submit">Find Nearby Centers</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        © 2025 Bike Wash Booking | All Rights Reserved
+    </footer>
+
+</body>
+</html>
